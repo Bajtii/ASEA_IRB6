@@ -42,4 +42,3 @@ def DH_elementary_matrix(
     A = (rot_z(theta), trans_z(d), trans_x(a), rot_x(alpha))
 
     return reduce(np.dot, A)
-
