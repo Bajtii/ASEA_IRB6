@@ -1,257 +1,234 @@
 # 🤖 Robot Simulation Program
 
-### Kinematics, Trajectory Planning & 3D Visualization System
-<img width="1378" height="784" alt="image" src="https://github.com/user-attachments/assets/cc0436d8-02a2-45dd-8cfd-4482a5806af3" />
+## Kinematics, Trajectory Planning & 3D Visualization System
+
+![Main View](assets/images/main_view.png)
 
 ---
 
-## 📌 Project Description
+# 📌 Project Description
 
-This project focuses on building an **interactive robotic manipulator simulator** with support for **forward and inverse kinematics**, **trajectory planning**, and **real-time 3D visualization**.
+This project is an interactive robotic manipulator simulation system focused on:
 
-The system allows users to simulate a **4-DOF robotic arm**, control joint angles, and generate motion trajectories using both **joint space** and **Cartesian space (XYZ coordinates)**.
+- forward kinematics
+- inverse kinematics
+- trajectory planning
+- real-time 3D visualization
 
-The project integrates:
+The application simulates a **4-DOF robotic arm** and allows the user to:
 
-* **Numerical computation (NumPy)**
-* **3D visualization (Matplotlib)**
-* **Robot kinematics (DH parameters)**
-* **Interactive GUI components (sliders, buttons, inputs)**
+- control robot joints manually
+- compute end-effector position
+- generate trajectories
+- visualize robot movement in real time
+- control the robot using Cartesian coordinates (XYZ)
 
-It serves as a complete educational tool for understanding **robotics, kinematics, and motion planning**.
-
----
-
-## 🎯 Project Goal
-
-The primary objective was to design a system that:
-
-* Simulates a robotic arm in 3D space
-* Implements **forward and inverse kinematics**
-* Allows trajectory creation and playback
-* Provides an intuitive interactive interface
-
-The project focuses on **mathematical modeling and visualization**, rather than hardware control.
+The project was created as a robotics and motion-planning educational platform using Python and mathematical modeling.
 
 ---
 
-## 🔁 System Workflow
+# 🎯 Main Features
 
-The simulation operates through the following stages:
+- ✅ 3D robot visualization
+- ✅ Forward kinematics
+- ✅ Inverse kinematics
+- ✅ Interactive joint control
+- ✅ Cartesian space control
+- ✅ Trajectory interpolation
+- ✅ Real-time animation
+- ✅ 2D trajectory drawing
+- ✅ End-effector tracking
+- ✅ Interactive GUI
 
 ---
 
-### 1️⃣ Robot Initialization
+# 🖼️ Application Preview
+
+## 3D Robot Visualization
+
+![Robot Visualization](assets/images/robot_view.png)
+
+---
+
+## Joint Control Using Sliders
+
+![Sliders](assets/images/sliders.png)
+
+---
+
+## Joint Angle Input Fields
+
+![Text Inputs](assets/images/textboxes.png)
+
+---
+
+## Trajectory Creation
+
+![Trajectory Creation](assets/images/trajectory.png)
+
+---
+
+## 2D Path Drawing Interface
+
+![2D Drawing](assets/images/drawing.png)
+
+---
+
+## Trajectory Animation
+
+![Trajectory Animation](assets/images/demo.gif)
+
+---
+
+# ⚙️ Technologies Used
+
+## Programming Language
+
+- Python 3.x
+
+## Libraries
+
+- NumPy
+- Matplotlib
+
+## Robotics Concepts
+
+- Denavit–Hartenberg convention
+- Homogeneous transformation matrices
+- Forward kinematics
+- Inverse kinematics
+- Trajectory interpolation
+
+---
+
+# 🧠 System Architecture
+
+The project consists of several main modules responsible for robot simulation and motion planning.
+
+---
+
+# 🔁 System Workflow
+
+## 1️⃣ Robot Initialization
 
 The system initializes:
 
-* Robot geometric parameters (link lengths, offsets)
-* Joint configuration (4 DOF)
-* Visualization environment
+- robot dimensions
+- joint configuration
+- visualization environment
+
+Robot parameters include:
+
+- link lengths
+- offsets
+- workspace dimensions
 
 ---
 
-### 2️⃣ Joint Control (Forward Kinematics)
+## 2️⃣ Forward Kinematics
 
-User controls robot via:
+The user controls robot joints using:
 
-* Sliders (Theta1–Theta4)
-<img width="1359" height="743" alt="image" src="https://github.com/user-attachments/assets/f1b1c3df-12df-4ab9-92b2-1ad883108485" />
-
-* Text input fields
-<img width="239" height="133" alt="image" src="https://github.com/user-attachments/assets/ed468538-3c4f-405d-ab21-be5289d1fa9f" />
+- sliders
+- text input fields
 
 The system computes:
 
-* End-effector position (X, Y, Z)
-* Joint positions
+- joint positions
+- end-effector coordinates
+- robot geometry
 
-Based on **forward kinematics equations**.
-
----
-
-### 3️⃣ Position Computation
-
-Robot joint positions are calculated using:
-
-* Trigonometric relations
-* Rotation around base axis
-* Link transformations
-
-This stage builds the full **robot geometry in 3D space**.
+in real time.
 
 ---
 
-### 4️⃣ Inverse Kinematics
+## 3️⃣ Position Computation
 
-User can input target position:
+The robot model is generated using:
 
-X, Y, Z
+- trigonometric equations
+- rotation matrices
+- coordinate transformations
 
-The system:
-
-* Computes required joint angles
-* Validates solution
-* Handles multiple configurations
-
-This allows intuitive **Cartesian control of the robot**.
+This creates a full 3D representation of the manipulator.
 
 ---
 
-### 5️⃣ 3D Visualization
+## 4️⃣ Inverse Kinematics
 
-Robot is rendered in real time:
+The user can enter:
 
-* Links and joints plotted in 3D
-* End-effector highlighted
-* Axes and workspace limits defined
+- X coordinate
+- Y coordinate
+- Z coordinate
 
+The system calculates:
 
----
+- required joint angles
+- reachable configurations
+- valid robot positions
 
-### 6️⃣ Trajectory Creation
-
-User can:
-
-* Save joint configurations
-* Add positions via XYZ coordinates
-* Remove last position
-
-These points form a **motion sequence**.
-<img width="1320" height="713" alt="image" src="https://github.com/user-attachments/assets/229ee7f8-9b72-48b7-87b9-e9f53ab685b4" />
+This enables Cartesian robot control.
 
 ---
 
-### 7️⃣ Trajectory Interpolation & Playback
+## 5️⃣ Trajectory Planning
 
-The system:
+The application allows the user to:
 
-* Interpolates positions between points
-* Converts XYZ → joint angles (IK)
-* Animates smooth robot motion
+- save robot positions
+- create motion sequences
+- interpolate trajectories
+- animate smooth movement
 
-Trajectory is visualized as:
+Trajectory points can be added using:
 
-* Continuous path
-* Animated movement
-
-![Trajectory Animation](https://github.com/user-attachments/assets/8778de54-9121-48e7-bcd3-8ebf83dc69a7)
-
----
-
-### 8️⃣ 2D Path Drawing Interface
-
-Additional window allows:
-
-* Drawing trajectory using mouse
-* Recording path points
-* Visualizing planar motion
-<img width="602" height="463" alt="image" src="https://github.com/user-attachments/assets/5f796e44-aeb4-4e7a-8e44-6eb49afab5e7" />
-
-This feature simulates **manual path planning**.
-
-<img width="2274" height="1248" alt="image" src="https://github.com/user-attachments/assets/67300e45-6c64-45f8-b505-a686c4d5ecae" />
+- joint angles
+- Cartesian coordinates
 
 ---
 
-## ⚙️ Technologies and Tools
+## 6️⃣ Real-Time Animation
 
-* Python 3.x
-* NumPy
-* Matplotlib
-* Custom DH transformation module
+The simulator interpolates motion between positions and visualizes:
 
----
-
-## 🧠 Core Concepts Implemented
-
-* Forward kinematics
-* Inverse kinematics
-* Denavit–Hartenberg (DH) convention
-* Homogeneous transformation matrices
-* Trajectory interpolation
-* Cartesian ↔ Joint space mapping
-* Interactive GUI (Matplotlib widgets)
+- smooth robot movement
+- continuous end-effector path
+- real-time trajectory playback
 
 ---
 
-## 🧩 Features
+## 7️⃣ 2D Path Drawing
 
-* Real-time robot control
-* 3D visualization of manipulator
-* End-effector position tracking
-* Inverse kinematics solver
-* Trajectory recording and playback
-* Cartesian coordinate input
-* Interactive 2D trajectory drawing
-* Smooth motion interpolation
+An additional window allows the user to:
+
+- draw trajectories manually
+- create planar paths
+- test path planning concepts
+
+using mouse interaction.
 
 ---
 
-## 📂 Project Structure
+# 📂 Project Structure
 
-```
+```text
 robot-simulation-program/
 │
-├── main.py                  # Main simulation script
-├── requirements.txt        # Dependencies
-├── README.md               # Documentation
+├── assets/
+│   └── images/
+│       ├── main_view.png
+│       ├── robot_view.png
+│       ├── sliders.png
+│       ├── textboxes.png
+│       ├── trajectory.png
+│       ├── drawing.png
+│       └── demo.gif
 │
 ├── utils/
-│   └── matrix_transformation.py   # DH matrices
+│   └── matrix_transformation.py
 │
-└── assets/
-    ├── demo.gif
-    ├── robot_view.png
-    ├── trajectory.png
-    └── drawing.png
-```
-
----
-
-## 🔌 Simulation Responsibilities
-
-The main application is responsible for:
-
-* Computing robot kinematics
-* Rendering 3D visualization
-* Handling user interaction
-* Managing trajectory logic
-
----
-
-## 🖥️ Mathematical Engine Responsibilities
-
-* Compute transformation matrices
-* Solve inverse kinematics
-* Validate position accuracy
-* Convert between coordinate systems
-
----
-
-## 🚀 Possible Future Improvements
-
-* GUI using PyQt or Tkinter
-* Collision detection
-* Path optimization algorithms
-* ROS integration
-* Export/import trajectories
-* Web-based visualization (Three.js)
-* Support for more DOF
-
----
-
-
-## 👨‍💻 Author
-
-Robotics simulation project focused on:
-
-* kinematics
-* motion planning
-* interactive visualization
-
----
-
-## 📜 License
-
-MIT License
+├── main.py
+├── requirements.txt
+├── README.md
+└── LICENSE
