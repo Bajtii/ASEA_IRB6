@@ -2,7 +2,8 @@
 
 ## Kinematics, Trajectory Planning & 3D Visualization System
 
-![Main View](assets/images/main_view.png)
+![Main View](<img width="1825" height="968" alt="Screenshot 2026-05-08 111612" src="https://github.com/user-attachments/assets/7de31f62-e007-4c59-b80f-4881c8733fc9" />
+)
 
 ---
 
