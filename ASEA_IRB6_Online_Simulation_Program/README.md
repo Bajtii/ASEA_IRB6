@@ -2,7 +2,7 @@
 
 ## Kinematics, Trajectory Planning & 3D Visualization System
 
-![Main View](https://github.com/user-attachments/assets/7de31f62-e007-4c59-b80f-4881c8733fc9)
+<img src="https://github.com/user-attachments/assets/7de31f62-e007-4c59-b80f-4881c8733fc9" width="1000"/>
 
 ---
 
@@ -29,16 +29,16 @@ The project was created as a robotics and motion-planning educational platform u
 
 # 🎯 Main Features
 
-- ✅ 3D robot visualization
-- ✅ Forward kinematics
-- ✅ Inverse kinematics
-- ✅ Interactive joint control
-- ✅ Cartesian space control
-- ✅ Trajectory interpolation
-- ✅ Real-time animation
-- ✅ 2D trajectory drawing
-- ✅ End-effector tracking
-- ✅ Interactive GUI
+- 3D robot visualization
+- Forward kinematics
+- Inverse kinematics
+- Interactive joint control
+- Cartesian space control
+- Trajectory interpolation
+- Real-time animation
+- 2D trajectory drawing
+- End-effector tracking
+- Interactive GUI
 
 ---
 
@@ -46,37 +46,39 @@ The project was created as a robotics and motion-planning educational platform u
 
 ## 3D Robot Visualization
 
-![Robot Visualization](assets/images/robot_view.png)
+<img src="https://github.com/user-attachments/assets/2912af8b-e3f4-4906-8170-729d10f47525" width="700"/>
 
 ---
 
 ## Joint Control Using Sliders
 
-![Sliders](assets/images/sliders.png)
+<img src="https://github.com/user-attachments/assets/59cd51c7-c097-4dae-a7f2-16149c11ea0e" width="1000"/>
 
 ---
 
 ## Joint Angle Input Fields
 
-![Text Inputs](assets/images/textboxes.png)
+<img src="https://github.com/user-attachments/assets/f5da7755-e521-47b4-b9ed-d15d26710e91" width="250"/>
 
 ---
 
 ## Trajectory Creation
 
-![Trajectory Creation](assets/images/trajectory.png)
+<img src="https://github.com/user-attachments/assets/df07523f-7099-4217-8e9e-1406193a8234" width="1000"/>
+
+<img src="https://github.com/user-attachments/assets/6e0b5228-3fd8-4bde-800d-79dbbae36ebf" width="700"/>
 
 ---
 
 ## 2D Path Drawing Interface
 
-![2D Drawing](assets/images/drawing.png)
+<img src="https://github.com/user-attachments/assets/6ed26cdd-64d8-4431-9a44-57dec3ef837a" width="700"/>
 
 ---
 
 ## Trajectory Animation
 
-![Trajectory Animation](assets/images/demo.gif)
+<img src="https://github.com/user-attachments/assets/9aedb0ae-244a-4c02-b62e-90fb9a5987c2" width="700"/>
 
 ---
 
@@ -103,7 +105,7 @@ The project was created as a robotics and motion-planning educational platform u
 
 # 🧠 System Architecture
 
-The project consists of several main modules responsible for robot simulation and motion planning.
+The project consists of modules responsible for robot simulation and motion planning.
 
 ---
 
@@ -111,102 +113,70 @@ The project consists of several main modules responsible for robot simulation an
 
 ## 1️⃣ Robot Initialization
 
-The system initializes:
-
 - robot dimensions
 - joint configuration
 - visualization environment
-
-Robot parameters include:
-
-- link lengths
-- offsets
-- workspace dimensions
 
 ---
 
 ## 2️⃣ Forward Kinematics
 
-The user controls robot joints using:
+User controls robot via:
 
 - sliders
-- text input fields
+- text inputs
 
-The system computes:
+System computes:
 
 - joint positions
-- end-effector coordinates
-- robot geometry
-
-in real time.
+- end-effector position
 
 ---
 
 ## 3️⃣ Position Computation
 
-The robot model is generated using:
+Uses:
 
-- trigonometric equations
+- trigonometry
 - rotation matrices
-- coordinate transformations
-
-This creates a full 3D representation of the manipulator.
+- transformations
 
 ---
 
 ## 4️⃣ Inverse Kinematics
 
-The user can enter:
+Input:
 
-- X coordinate
-- Y coordinate
-- Z coordinate
+- X, Y, Z
 
-The system calculates:
+Output:
 
-- required joint angles
-- reachable configurations
-- valid robot positions
-
-This enables Cartesian robot control.
+- joint angles
+- valid configurations
 
 ---
 
 ## 5️⃣ Trajectory Planning
 
-The application allows the user to:
-
-- save robot positions
-- create motion sequences
-- interpolate trajectories
-- animate smooth movement
-
-Trajectory points can be added using:
-
-- joint angles
-- Cartesian coordinates
+- save positions
+- interpolate motion
+- animate robot path
 
 ---
 
 ## 6️⃣ Real-Time Animation
 
-The simulator interpolates motion between positions and visualizes:
-
-- smooth robot movement
-- continuous end-effector path
-- real-time trajectory playback
+- smooth motion
+- trajectory playback
+- end-effector path
 
 ---
 
 ## 7️⃣ 2D Path Drawing
 
-An additional window allows the user to:
-
-- draw trajectories manually
-- create planar paths
-- test path planning concepts
-
-using mouse interaction.
+- manual drawing
+- mouse input
+- planar trajectory testing
 
 ---
 
@@ -230,5 +200,7 @@ robot-simulation-program/
 │
 ├── main.py
 ├── requirements.txt
-├── README.md
 └── LICENSE
+```
+
+---
