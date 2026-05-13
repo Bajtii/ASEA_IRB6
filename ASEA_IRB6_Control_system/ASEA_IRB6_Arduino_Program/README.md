@@ -261,7 +261,3 @@ Planned or possible future extensions:
 - Real-time trajectory interpolation
 
 ---
-
-# Author
-
-Embedded motion-control firmware developed for multi-axis robotic systems using DC motors and UART-based real-time communication.
