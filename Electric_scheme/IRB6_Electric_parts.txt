@@ -1,0 +1,9 @@
+Components used in project:
+
+- ESP32 — main control microcontroller
+- DG4S servo drive controllers
+- DC servo motors of the ASEA IRB6 robot
+- Incremental encoders
+- Differential line driver circuits for encoder signal transmission   and noise immunity
+- 12 V power supply for the control and driver electronics
+- 35 V power supply for the servo motors
